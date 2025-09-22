@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="dark_blue">#050F2E</color>
+    <color name="light_blue">#263259</color>
+
+    <color name="divider">#F2F4F6</color>
+
+
+    <color name="navy_blue">#263259</color>
+    <color name="midtone">#8D97B9</color>
+
+    <color name="light_green">#E6FEF2</color>
+    <color name="green">#009D51</color>
+
+    <color name="status_pending">#FFE2C6</color>
+    <color name="status_rejected">#FFE5E7</color>
+    <color name="status_failed">#FFF6CC</color>
+    <color name="status_canceled">#F2F4F6</color>
+    <color name="status_expired">#EDE5FF</color>
+    <color name="status_authorized">#E6F6FF</color>
+    <color name="status_default">#BDBDBD</color>
+
+
+
+
+    <color name="status_pending_text">#B35900</color>      <!-- Amber/Yellow -->
+    <color name="status_rejected_text">#FF2333</color>     <!-- Red -->
+    <color name="status_failed_text">#AC9006</color>       <!-- Dark Red -->
+    <color name="status_canceled_text">#314072</color>     <!-- Grey -->
+    <color name="status_expired_text">#314072</color>      <!-- Deep Orange -->
+    <color name="status_authorized_text">#00A1FE</color>   <!-- Blue -->
+    <color name="status_default_text">#BDBDBD</color>      <!-- Light Grey -->
+
+
+    <color name="shimmer_placeholder">#E0E0E0</color>
+    <color name="shimmer_placeholder_dark">#CCCCCC</color>
+
+
+</resources>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">WPS Ui</string>
+
+    <string name="available">Available</string>
+    <string name="history">History</string>
+
+    <string name="no_payroll">You don\'t have any Payrolls yet</string>
+    <string name="auth_payroll">Start now by authorizing your payrolls to get the\nmost of lla\'s features!</string>
+
+
+    <string name="review_payment">Review Payment</string>
+    <string name="amount">Amount</string>
+    <string name="payment_date">Payment Date</string>
+    <string name="creation_date">Creation Date</string>
+    <string name="no_of_salaries">No. of Salaries</string>
+    <string name="status">Status</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
