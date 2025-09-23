@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <!-- Transition -->
+    <Transition
+        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@id/end"
+        motion:duration="600">
+
+        <!-- Optional: trigger by swipe -->
+        <OnSwipe
+            motion:touchAnchorId="@id/cv_main_data"
+            motion:touchAnchorSide="top"
+            motion:dragDirection="dragUp" />
+    </Transition>
+
+    <!-- Start State -->
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/header_view"
+            android:layout_width="0dp"
+            android:layout_height="312dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent" />
+
+        <Constraint
+            android:id="@id/cv_main_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="230dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+    </ConstraintSet>
+
+    <!-- End State -->
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/header_view"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent" />
+
+        <Constraint
+            android:id="@id/cv_main_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            motion:layout_constraintTop_toBottomOf="@id/header_view"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+    </ConstraintSet>
+
+</MotionScene>

@@ -1,5 +1,9 @@
 package com.example.wpsui
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Payroll (
     val paymentMonth: String,
     val paymentId: String,
@@ -8,4 +12,4 @@ data class Payroll (
     val creationDate: String,
     val paymentDate: String,
     val amount: String
-)
+): Parcelable

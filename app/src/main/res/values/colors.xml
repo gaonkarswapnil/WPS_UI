@@ -41,4 +41,7 @@
     <color name="shimmer_placeholder_dark">#CCCCCC</color>
 
 
+    <color name="label">#323D62</color>
+
+
 </resources>

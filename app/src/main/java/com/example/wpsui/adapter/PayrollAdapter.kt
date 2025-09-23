@@ -14,11 +14,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.wpsui.Payroll
 import com.example.wpsui.R
 import com.example.wpsui.Status
+import com.example.wpsui.StatusStateFragment
 import kotlin.with
 
 class PayrollAdapter(
-    private var list: List<Payroll>
+    private var list: List<Payroll>,
+    private val listener: OnPayrollClickListener
 ) : RecyclerView.Adapter<PayrollAdapter.PayrollViewHolder>() {
+
+    interface OnPayrollClickListener {
+        fun onPayrollClick(payroll: Payroll)
+    }
 
     // Track the currently selected item position
     private var selectedPosition = RecyclerView.NO_POSITION
@@ -184,6 +190,8 @@ class PayrollAdapter(
                 // Notify previous and current positions to refresh UI
                 if (previousPosition != RecyclerView.NO_POSITION) notifyItemChanged(previousPosition)
                 notifyItemChanged(position)
+
+                listener.onPayrollClick(item)
             }
         }
     }

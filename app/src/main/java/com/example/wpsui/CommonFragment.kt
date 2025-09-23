@@ -5,14 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wpsui.adapter.PayrollAdapter
 import com.example.wpsui.databinding.FragmentAvailableBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class CommonFragment : Fragment() {
+class CommonFragment : Fragment(), PayrollAdapter.OnPayrollClickListener {
 
     private lateinit var binding: FragmentAvailableBinding
     private var tabType: String? = null
@@ -78,7 +80,7 @@ class CommonFragment : Fragment() {
 
         binding.availableLayout.availableRecyclerView.layoutManager =
             LinearLayoutManager(requireContext())
-        val adapter = PayrollAdapter(list)
+        val adapter = PayrollAdapter(list, this)
         binding.availableLayout.availableRecyclerView.adapter = adapter
     }
 
@@ -87,7 +89,7 @@ class CommonFragment : Fragment() {
         Payroll(
             paymentMonth = "January",
             paymentId = "PMT001",
-            status = Status.COMPLETED,
+            status = Status.AUTHORIZED,
             noOfSalaries = 5,
             creationDate = "2025-01-01",
             paymentDate = "2025-01-05",
@@ -187,11 +189,23 @@ class CommonFragment : Fragment() {
                 binding.btnFilter.text = "Sort"
                 binding.btnFilter.setIconResource(R.drawable.sorting_general) // your sorting icon
             }
+
             "History" -> {
                 binding.btnFilter.text = "Filter"
                 binding.btnFilter.setIconResource(R.drawable.filter) // your history icon
             }
         }
+    }
+
+    override fun onPayrollClick(payroll: Payroll) {
+//        val fragment = StatusStateFragment.newInstance(payroll)
+//        parentFragmentManager.commit {
+//            replace(R.id.mainFragment, fragment)
+//            addToBackStack(null)
+//        }
+
+        val action = MainFragmentDirections.actionMainFragmentToStatusStateFragment(payroll)
+        findNavController().navigate(action)
     }
 
 }
