@@ -8,6 +8,7 @@
 
     <color name="divider">#F2F4F6</color>
 
+    <color name="no_data_text">#7F869D</color>
 
     <color name="navy_blue">#263259</color>
     <color name="midtone">#8D97B9</color>
@@ -34,6 +35,7 @@
     <color name="status_authorized_text">#00A1FE</color>   <!-- Blue -->
     <color name="status_default_text">#BDBDBD</color>      <!-- Light Grey -->
 
+    <color name="payroll_text">#000E3C</color>
 
     <color name="shimmer_placeholder">#E0E0E0</color>
     <color name="shimmer_placeholder_dark">#CCCCCC</color>
