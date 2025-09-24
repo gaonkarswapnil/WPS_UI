@@ -144,13 +144,16 @@ class StatusStateFragment : Fragment() {
 
 
         if(payroll.status== Status.AUTHORIZED){
+            binding.scrollView.setOnTouchListener(null)
             binding.llAuthorizePayment.visibility = View.GONE
             binding.llCancelPayment.visibility = View.VISIBLE
         }else if(payroll.status== Status.PENDING){
+            binding.scrollView.setOnTouchListener(null)
             binding.llAuthorizePayment.visibility = View.VISIBLE
             binding.llCancelPayment.visibility = View.GONE
         }else{
-            binding.llAuthorizePayment.visibility = View.GONE
+            binding.scrollView.setOnTouchListener { _, _ -> true }
+            binding.llAuthorizePayment.visibility = View.INVISIBLE
             binding.llCancelPayment.visibility = View.GONE
         }
 

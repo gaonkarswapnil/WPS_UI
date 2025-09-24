@@ -127,6 +127,7 @@
             <androidx.core.widget.NestedScrollView
                 android:id="@+id/scroll_view"
                 android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
                 android:layout_height="0dp"
                 android:clipToPadding="false"
                 android:paddingTop="16dp"
