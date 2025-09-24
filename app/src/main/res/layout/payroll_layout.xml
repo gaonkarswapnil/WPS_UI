@@ -9,205 +9,172 @@
     app:cardElevation="4dp"
     app:cardBackgroundColor="@android:color/white">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Header Section -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvPayrollTitle"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="4dp">
+            android:textColor="@color/dark_blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivArrowRight" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/ivArrowRight"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_right"
+            app:tint="@color/midtone"
+            app:layout_constraintTop_toTopOf="@id/tvPayrollTitle"
+            app:layout_constraintBottom_toBottomOf="@id/tvPayrollTitle"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-                <TextView
-                    android:id="@+id/tvPayrollTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/dark_blue"
-                    android:textSize="18sp"
-                    android:layout_weight="1"
-                    android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvPayrollRef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/payroll_text"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/tvPayrollTitle"
+            app:layout_constraintStart_toStartOf="parent" />
 
-                <ImageView
-                    android:id="@+id/ivArrowRight"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_weight="0"
-                    android:layout_gravity="end"
-                    android:src="@drawable/icon_right"
-                    app:tint="@color/midtone" />
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/tvPayrollRef"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:textColor="@color/payroll_text"
-                android:textSize="12sp" />
-
-
-
-
-
-        </LinearLayout>
-        <!-- Divider -->
         <View
-            android:layout_width="match_parent"
+            android:id="@+id/divider"
+            android:layout_width="0dp"
             android:layout_height="1dp"
-            android:background="@color/divider" />
+            android:layout_marginTop="8dp"
+            android:background="@color/divider"
+            app:layout_constraintTop_toBottomOf="@id/tvPayrollRef"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- Details Section -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvStatusLabel"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:text="@string/status"
+            android:textColor="@color/midtone"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvStatus" />
 
-            <!-- Status Row -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/status"
-                    android:textColor="@color/midtone"
-                    android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_status"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text="COMPLETED"
+            android:textColor="@color/green"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvStatusLabel"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-                <TextView
-                    android:id="@+id/tvStatus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_status"
-                    android:paddingHorizontal="12dp"
-                    android:paddingVertical="4dp"
-                    android:text="COMPLETED"
-                    android:textColor="@color/green"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvNoOfSalariesLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/no_of_salaries"
+            android:textColor="@color/midtone"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvStatusLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvNoOfSalaries" />
 
-            </LinearLayout>
+        <TextView
+            android:id="@+id/tvNoOfSalaries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/payroll_text"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvNoOfSalariesLabel"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-            <!-- No. of Salaries Row -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/no_of_salaries"
-                    android:textColor="@color/midtone"
-                    android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tvCreationDateLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/creation_date"
+            android:textColor="@color/midtone"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvNoOfSalariesLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvCreationDate" />
 
-                <TextView
-                    android:id="@+id/tvNoOfSalaries"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/payroll_text"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvCreationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/payroll_text"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvCreationDateLabel"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-            </LinearLayout>
+        <TextView
+            android:id="@+id/tvPaymentDateLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/payment_date"
+            android:textColor="@color/midtone"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvCreationDateLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvPaymentDate" />
 
-            <!-- Creation Date Row -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
+        <TextView
+            android:id="@+id/tvPaymentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/payroll_text"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvPaymentDateLabel"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/creation_date"
-                    android:textColor="@color/midtone"
-                    android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tvAmountLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/amount"
+            android:textColor="@color/midtone"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvPaymentDateLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvAmount" />
 
-                <TextView
-                    android:id="@+id/tvCreationDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/payroll_text"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/payroll_text"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvAmountLabel"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-            </LinearLayout>
 
-            <!-- Payment Date Row -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/payment_date"
-                    android:textColor="@color/midtone"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/tvPaymentDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/payroll_text"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <!-- Amount Row -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/amount"
-                    android:textColor="@color/midtone"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/tvAmount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/payroll_text"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- Button Section -->
         <Button
             android:id="@+id/btnReviewPayment"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginTop="20dp"
             android:visibility="gone"
@@ -216,7 +183,10 @@
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/tvAmountLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

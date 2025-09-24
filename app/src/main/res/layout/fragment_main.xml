@@ -9,18 +9,19 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="178dp"
+        android:layout_height="wrap_content"
         android:background="@color/dark_blue"
-        android:paddingTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tabGravity="fill"
+        app:tabGravity="center"
         app:tabIndicatorHeight="0dp"
         app:tabMode="auto"
+
         app:tabRippleColor="@android:color/transparent"
-        app:tabTextAppearance="@style/CustomTabTextStyle" />
+        app:tabTextColor="@color/tab_text_selector"
+        app:tabBackground="@drawable/tab_background"/>
 
     <FrameLayout
         android:id="@+id/fragmentContainer"

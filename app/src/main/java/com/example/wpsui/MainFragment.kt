@@ -34,14 +34,18 @@ class MainFragment : Fragment() {
         binding.tabLayout.removeAllTabs()
 
         // Tab names
+//        val tabNames = listOf("Available", "History")
+//        for (name in tabNames) {
+//            val tab = binding.tabLayout.newTab()
+//            tab.setCustomView(R.layout.custom_tab)
+//            val textView = tab.customView?.findViewById<TextView>(R.id.tabText)
+//            textView?.text = name
+//            tab.customView?.isSelected = tab.position == 0 // select first tab by default
+//            binding.tabLayout.addTab(tab)
+//        }
         val tabNames = listOf("Available", "History")
         for (name in tabNames) {
-            val tab = binding.tabLayout.newTab()
-            tab.setCustomView(R.layout.custom_tab)
-            val textView = tab.customView?.findViewById<TextView>(R.id.tabText)
-            textView?.text = name
-            tab.customView?.isSelected = tab.position == 0 // select first tab by default
-            binding.tabLayout.addTab(tab)
+            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(name))
         }
 
         // Tab selection listener
