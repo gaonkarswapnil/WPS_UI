@@ -32,4 +32,31 @@
     <string name="reject">Reject</string>
     <string name="cancel_payment">Cancel Payment</string>
 
+
+
+    <string name="authorization_rejection">Please specify the reason for the authorization rejection</string>
+    <string name="continuee">Continue</string>
+
+<!--    <string name="salaries">Salaries</string>-->
+
+    <string name="sort">Sort</string>
+    <string name="search">Search</string>
+
+    <string name="filter">Filter</string>
+    <string name="name">Name</string>
+    <string name="a_z">A-Z</string>
+    <string name="z_a">Z-A</string>
+<!--    <string name="amount">Amount</string>-->
+    <string name="low_to_high">Low to High</string>
+    <string name="high_to_low">High to Low</string>
+    <string name="transaction_date">Transaction Date</string>
+    <string name="start_date">Start Date</string>
+    <string name="finish_date">Finish Date</string>
+    <string name="amount_range">Amount Range</string>
+<!--    <string name="bhd">BHD</string>-->
+    <string name="amount_hint">0.00</string>
+    <string name="apply_filter">Apply Filtering</string>
+    <string name="cancel">Cancel</string>
+
+
 </resources>

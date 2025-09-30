@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="@dimen/dimen_10dp"
+android:background="@android:color/white">
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="@dimen/dimen_14sp"
+        android:textColor="@color/slate_gray_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAccountName"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:text="Abdulrahman Khaled Youssef"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/dimen_16sp"
+        android:textColor="@color/button_blue"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        android:layout_marginEnd="@dimen/dimen_12dp"
+        app:layout_constraintStart_toEndOf="@id/tvNumber"
+        app:layout_constraintEnd_toStartOf="@id/tvAmount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BHD 12,121.002"
+        android:textSize="@dimen/dimen_16sp"
+        android:textColor="@color/sky_blue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvEmployerName"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:text="Al-Salem Al-Harbi"
+        android:textSize="@dimen/dimen_16sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/button_blue"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:layout_marginEnd="@dimen/dimen_12dp"
+        app:layout_constraintStart_toEndOf="@id/tvNumber"
+        app:layout_constraintEnd_toStartOf="@id/tvGcc"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountName" />
+
+
+    <TextView
+        android:id="@+id/tvAccountNumber"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:text="BH43 5000 0012 3456 7890 1234"
+        android:textSize="@dimen/dimen_14sp"
+        android:textColor="@color/slate_gray_blue"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:layout_marginEnd="@dimen/dimen_12dp"
+        app:layout_constraintStart_toEndOf="@id/tvNumber"
+        app:layout_constraintEnd_toStartOf="@id/tvGcc"
+        app:layout_constraintTop_toBottomOf="@id/tvEmployerName" />
+
+    <TextView
+        android:id="@+id/tvGcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GCC: 482936157"
+        android:textColor="@color/slate_gray_blue"
+        android:textSize="@dimen/dimen_12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAmount" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/divider"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        app:layout_constraintStart_toEndOf="@id/tvNumber"
+        app:layout_constraintEnd_toStartOf="@id/tvGcc"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountNumber" />
+</androidx.constraintlayout.widget.ConstraintLayout>

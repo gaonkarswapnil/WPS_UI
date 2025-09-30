@@ -44,4 +44,23 @@
     <color name="label">#323D62</color>
 
 
+<!--    <color name="dark_blue">#010C2F</color>-->
+    <color name="ocean_blue">#021D5B</color>
+    <color name="button_blue">#263259</color>
+
+
+<!--    <color name="midtone">#8D97B9</color>-->
+<!--    <color name="green">#7AEE00</color>-->
+
+    <color name="slate_gray_blue">#7F869D</color>
+    <color name="sky_blue">#00A1FE</color>
+<!--    <color name="divider">#F2F4F6</color>-->
+
+    <color name="light_grey">#E0E0E0</color>
+
+    <color name="midnight_navy">#000E3C</color>
+
+    <color name="indigo_grey">#455587</color>
+
+
 </resources>
